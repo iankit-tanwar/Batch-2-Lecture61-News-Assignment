@@ -8,6 +8,33 @@
 </head>
 
 <body>
+    <form>
+        <input type="text" name="text">
+        <input type="submit" onclick="myNews(event)">
+        <input type="button" value="submit">
+    </form>
+
+    <p id="para"></p>
+
+
+    <script>
+
+        //1 function defination
+
+        //Global variable
+        let txt = document.querySelector('input[name="text"]');
+
+        let para = document.getElementById('para');
+
+        function myNews(e){
+            //function body
+          //  alert('okk');
+            e.preventDefault();
+            console.log(txt.value);
+            para.innerHTML += txt.value;
+        }
+
+    </script>
 
 </body>
 
